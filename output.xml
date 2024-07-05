@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20240705 21:55:14.751" rpa="false" schemaversion="4">
+<suite id="s1" name="finishThePuzzle" source="D:\QA\Loker\Traveloka\TravelokaTest\features\finishThePuzzle.robot">
+<test id="s1-t1" name="Finish The Puzzle" line="8">
+<kw name="Open Browser Using Chrome Browser" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240705 21:55:15.242" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20240705 21:55:15.242" endtime="20240705 21:55:18.553"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240705 21:55:18.554" endtime="20240705 21:55:18.762"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:15.242" endtime="20240705 21:55:18.762"/>
+</kw>
+<kw name="Verify The Web Has Opened" library="1to50_steps">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL 1to50}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240705 21:55:18.764" level="INFO">Opening url 'https://zzzscore.com/1to50/en/'</msg>
+<status status="PASS" starttime="20240705 21:55:18.764" endtime="20240705 21:55:25.353"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Reset Button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.353" endtime="20240705 21:55:25.389"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Reset Button}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240705 21:55:25.408" level="INFO">Element '//a[@class='resetBtn']' is displayed.</msg>
+<status status="PASS" starttime="20240705 21:55:25.389" endtime="20240705 21:55:25.408"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240705 21:55:25.409" level="INFO">Executing JavaScript:
+window.scrollTo(0,200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240705 21:55:25.408" endtime="20240705 21:55:25.422"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:18.762" endtime="20240705 21:55:25.422"/>
+</kw>
+<kw name="Click The Puzzle" library="1to50_steps">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>51</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.423" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='1']</msg>
+<status status="PASS" starttime="20240705 21:55:25.423" endtime="20240705 21:55:25.423"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.423" endtime="20240705 21:55:25.444"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.444" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='1']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.444" endtime="20240705 21:55:25.498"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.423" endtime="20240705 21:55:25.498"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.499" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='2']</msg>
+<status status="PASS" starttime="20240705 21:55:25.499" endtime="20240705 21:55:25.499"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.499" endtime="20240705 21:55:25.520"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.520" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='2']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.520" endtime="20240705 21:55:25.558"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.498" endtime="20240705 21:55:25.558"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.558" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='3']</msg>
+<status status="PASS" starttime="20240705 21:55:25.558" endtime="20240705 21:55:25.558"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.559" endtime="20240705 21:55:25.580"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.581" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='3']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.580" endtime="20240705 21:55:25.622"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.558" endtime="20240705 21:55:25.622"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.622" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='4']</msg>
+<status status="PASS" starttime="20240705 21:55:25.622" endtime="20240705 21:55:25.622"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.622" endtime="20240705 21:55:25.643"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.644" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='4']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.644" endtime="20240705 21:55:25.685"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.622" endtime="20240705 21:55:25.685"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.687" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='5']</msg>
+<status status="PASS" starttime="20240705 21:55:25.687" endtime="20240705 21:55:25.687"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.687" endtime="20240705 21:55:25.708"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.708" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='5']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.708" endtime="20240705 21:55:25.742"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.687" endtime="20240705 21:55:25.742"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.742" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='6']</msg>
+<status status="PASS" starttime="20240705 21:55:25.742" endtime="20240705 21:55:25.742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.742" endtime="20240705 21:55:25.763"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.764" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='6']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.763" endtime="20240705 21:55:25.800"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.742" endtime="20240705 21:55:25.800"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.800" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='7']</msg>
+<status status="PASS" starttime="20240705 21:55:25.800" endtime="20240705 21:55:25.800"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.800" endtime="20240705 21:55:25.867"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.867" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='7']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.867" endtime="20240705 21:55:25.908"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.800" endtime="20240705 21:55:25.908"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.910" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='8']</msg>
+<status status="PASS" starttime="20240705 21:55:25.908" endtime="20240705 21:55:25.910"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.910" endtime="20240705 21:55:25.935"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.936" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='8']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.935" endtime="20240705 21:55:25.969"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.908" endtime="20240705 21:55:25.969"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:25.970" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='9']</msg>
+<status status="PASS" starttime="20240705 21:55:25.970" endtime="20240705 21:55:25.970"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:25.970" endtime="20240705 21:55:25.990"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:25.990" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='9']'.</msg>
+<status status="PASS" starttime="20240705 21:55:25.990" endtime="20240705 21:55:26.023"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:25.969" endtime="20240705 21:55:26.023"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.023" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='10']</msg>
+<status status="PASS" starttime="20240705 21:55:26.023" endtime="20240705 21:55:26.023"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.023" endtime="20240705 21:55:26.042"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.043" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='10']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.042" endtime="20240705 21:55:26.074"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.023" endtime="20240705 21:55:26.074"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.074" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='11']</msg>
+<status status="PASS" starttime="20240705 21:55:26.074" endtime="20240705 21:55:26.074"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.074" endtime="20240705 21:55:26.094"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.094" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='11']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.094" endtime="20240705 21:55:26.128"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.074" endtime="20240705 21:55:26.128"/>
+</iter>
+<iter>
+<var name="${i}">12</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.128" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='12']</msg>
+<status status="PASS" starttime="20240705 21:55:26.128" endtime="20240705 21:55:26.128"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.128" endtime="20240705 21:55:26.149"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.149" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='12']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.149" endtime="20240705 21:55:26.185"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.128" endtime="20240705 21:55:26.185"/>
+</iter>
+<iter>
+<var name="${i}">13</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.185" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='13']</msg>
+<status status="PASS" starttime="20240705 21:55:26.185" endtime="20240705 21:55:26.185"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.185" endtime="20240705 21:55:26.204"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.205" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='13']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.204" endtime="20240705 21:55:26.238"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.185" endtime="20240705 21:55:26.238"/>
+</iter>
+<iter>
+<var name="${i}">14</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.238" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='14']</msg>
+<status status="PASS" starttime="20240705 21:55:26.238" endtime="20240705 21:55:26.238"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.238" endtime="20240705 21:55:26.267"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.268" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='14']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.267" endtime="20240705 21:55:26.311"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.238" endtime="20240705 21:55:26.311"/>
+</iter>
+<iter>
+<var name="${i}">15</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.311" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='15']</msg>
+<status status="PASS" starttime="20240705 21:55:26.311" endtime="20240705 21:55:26.311"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.311" endtime="20240705 21:55:26.335"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.335" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='15']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.335" endtime="20240705 21:55:26.392"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.311" endtime="20240705 21:55:26.392"/>
+</iter>
+<iter>
+<var name="${i}">16</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.393" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='16']</msg>
+<status status="PASS" starttime="20240705 21:55:26.392" endtime="20240705 21:55:26.393"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.393" endtime="20240705 21:55:26.414"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.415" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='16']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.414" endtime="20240705 21:55:26.447"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.392" endtime="20240705 21:55:26.447"/>
+</iter>
+<iter>
+<var name="${i}">17</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.447" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='17']</msg>
+<status status="PASS" starttime="20240705 21:55:26.447" endtime="20240705 21:55:26.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.447" endtime="20240705 21:55:26.469"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.469" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='17']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.469" endtime="20240705 21:55:26.507"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.447" endtime="20240705 21:55:26.507"/>
+</iter>
+<iter>
+<var name="${i}">18</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.508" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='18']</msg>
+<status status="PASS" starttime="20240705 21:55:26.507" endtime="20240705 21:55:26.508"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.508" endtime="20240705 21:55:26.532"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.534" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='18']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.532" endtime="20240705 21:55:26.575"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.507" endtime="20240705 21:55:26.575"/>
+</iter>
+<iter>
+<var name="${i}">19</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.576" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='19']</msg>
+<status status="PASS" starttime="20240705 21:55:26.575" endtime="20240705 21:55:26.576"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.576" endtime="20240705 21:55:26.596"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.597" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='19']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.597" endtime="20240705 21:55:26.636"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.575" endtime="20240705 21:55:26.636"/>
+</iter>
+<iter>
+<var name="${i}">20</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.637" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='20']</msg>
+<status status="PASS" starttime="20240705 21:55:26.636" endtime="20240705 21:55:26.637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.637" endtime="20240705 21:55:26.657"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.658" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='20']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.658" endtime="20240705 21:55:26.694"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.636" endtime="20240705 21:55:26.694"/>
+</iter>
+<iter>
+<var name="${i}">21</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.696" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='21']</msg>
+<status status="PASS" starttime="20240705 21:55:26.696" endtime="20240705 21:55:26.696"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.696" endtime="20240705 21:55:26.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.717" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='21']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.717" endtime="20240705 21:55:26.752"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.696" endtime="20240705 21:55:26.752"/>
+</iter>
+<iter>
+<var name="${i}">22</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.752" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='22']</msg>
+<status status="PASS" starttime="20240705 21:55:26.752" endtime="20240705 21:55:26.752"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.752" endtime="20240705 21:55:26.791"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.793" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='22']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.791" endtime="20240705 21:55:26.830"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.752" endtime="20240705 21:55:26.830"/>
+</iter>
+<iter>
+<var name="${i}">23</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.831" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='23']</msg>
+<status status="PASS" starttime="20240705 21:55:26.831" endtime="20240705 21:55:26.831"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.831" endtime="20240705 21:55:26.851"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.852" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='23']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.851" endtime="20240705 21:55:26.885"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.830" endtime="20240705 21:55:26.885"/>
+</iter>
+<iter>
+<var name="${i}">24</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.886" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='24']</msg>
+<status status="PASS" starttime="20240705 21:55:26.886" endtime="20240705 21:55:26.886"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.886" endtime="20240705 21:55:26.906"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.906" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='24']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.906" endtime="20240705 21:55:26.939"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.886" endtime="20240705 21:55:26.939"/>
+</iter>
+<iter>
+<var name="${i}">25</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.939" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='25']</msg>
+<status status="PASS" starttime="20240705 21:55:26.939" endtime="20240705 21:55:26.939"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.939" endtime="20240705 21:55:26.958"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:26.959" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='25']'.</msg>
+<status status="PASS" starttime="20240705 21:55:26.958" endtime="20240705 21:55:26.990"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.939" endtime="20240705 21:55:26.990"/>
+</iter>
+<iter>
+<var name="${i}">26</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:26.990" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='26']</msg>
+<status status="PASS" starttime="20240705 21:55:26.990" endtime="20240705 21:55:26.990"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:26.990" endtime="20240705 21:55:27.218"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.219" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='26']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.218" endtime="20240705 21:55:27.247"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:26.990" endtime="20240705 21:55:27.247"/>
+</iter>
+<iter>
+<var name="${i}">27</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.248" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='27']</msg>
+<status status="PASS" starttime="20240705 21:55:27.248" endtime="20240705 21:55:27.248"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.248" endtime="20240705 21:55:27.267"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.267" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='27']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.267" endtime="20240705 21:55:27.296"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.248" endtime="20240705 21:55:27.296"/>
+</iter>
+<iter>
+<var name="${i}">28</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.296" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='28']</msg>
+<status status="PASS" starttime="20240705 21:55:27.296" endtime="20240705 21:55:27.296"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.296" endtime="20240705 21:55:27.315"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.316" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='28']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.315" endtime="20240705 21:55:27.343"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.296" endtime="20240705 21:55:27.343"/>
+</iter>
+<iter>
+<var name="${i}">29</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.343" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='29']</msg>
+<status status="PASS" starttime="20240705 21:55:27.343" endtime="20240705 21:55:27.343"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.343" endtime="20240705 21:55:27.362"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.363" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='29']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.362" endtime="20240705 21:55:27.392"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.343" endtime="20240705 21:55:27.392"/>
+</iter>
+<iter>
+<var name="${i}">30</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.393" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='30']</msg>
+<status status="PASS" starttime="20240705 21:55:27.392" endtime="20240705 21:55:27.393"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.393" endtime="20240705 21:55:27.412"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.412" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='30']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.412" endtime="20240705 21:55:27.442"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.392" endtime="20240705 21:55:27.442"/>
+</iter>
+<iter>
+<var name="${i}">31</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.442" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='31']</msg>
+<status status="PASS" starttime="20240705 21:55:27.442" endtime="20240705 21:55:27.442"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.442" endtime="20240705 21:55:27.461"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.461" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='31']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.461" endtime="20240705 21:55:27.493"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.442" endtime="20240705 21:55:27.493"/>
+</iter>
+<iter>
+<var name="${i}">32</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.494" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='32']</msg>
+<status status="PASS" starttime="20240705 21:55:27.494" endtime="20240705 21:55:27.494"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.494" endtime="20240705 21:55:27.517"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.517" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='32']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.517" endtime="20240705 21:55:27.548"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.493" endtime="20240705 21:55:27.548"/>
+</iter>
+<iter>
+<var name="${i}">33</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.548" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='33']</msg>
+<status status="PASS" starttime="20240705 21:55:27.548" endtime="20240705 21:55:27.548"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.548" endtime="20240705 21:55:27.568"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.569" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='33']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.568" endtime="20240705 21:55:27.600"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.548" endtime="20240705 21:55:27.600"/>
+</iter>
+<iter>
+<var name="${i}">34</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.601" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='34']</msg>
+<status status="PASS" starttime="20240705 21:55:27.600" endtime="20240705 21:55:27.601"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.601" endtime="20240705 21:55:27.620"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.621" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='34']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.621" endtime="20240705 21:55:27.650"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.600" endtime="20240705 21:55:27.650"/>
+</iter>
+<iter>
+<var name="${i}">35</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.650" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='35']</msg>
+<status status="PASS" starttime="20240705 21:55:27.650" endtime="20240705 21:55:27.650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.651" endtime="20240705 21:55:27.671"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.671" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='35']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.671" endtime="20240705 21:55:27.702"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.650" endtime="20240705 21:55:27.702"/>
+</iter>
+<iter>
+<var name="${i}">36</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.702" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='36']</msg>
+<status status="PASS" starttime="20240705 21:55:27.702" endtime="20240705 21:55:27.702"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.702" endtime="20240705 21:55:27.728"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.728" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='36']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.728" endtime="20240705 21:55:27.764"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.702" endtime="20240705 21:55:27.764"/>
+</iter>
+<iter>
+<var name="${i}">37</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.764" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='37']</msg>
+<status status="PASS" starttime="20240705 21:55:27.764" endtime="20240705 21:55:27.764"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.764" endtime="20240705 21:55:27.784"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.786" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='37']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.784" endtime="20240705 21:55:27.817"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.764" endtime="20240705 21:55:27.817"/>
+</iter>
+<iter>
+<var name="${i}">38</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.817" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='38']</msg>
+<status status="PASS" starttime="20240705 21:55:27.817" endtime="20240705 21:55:27.817"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.817" endtime="20240705 21:55:27.838"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.839" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='38']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.838" endtime="20240705 21:55:27.868"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.817" endtime="20240705 21:55:27.868"/>
+</iter>
+<iter>
+<var name="${i}">39</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.868" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='39']</msg>
+<status status="PASS" starttime="20240705 21:55:27.868" endtime="20240705 21:55:27.870"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.870" endtime="20240705 21:55:27.889"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.890" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='39']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.890" endtime="20240705 21:55:27.920"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.868" endtime="20240705 21:55:27.920"/>
+</iter>
+<iter>
+<var name="${i}">40</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.920" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='40']</msg>
+<status status="PASS" starttime="20240705 21:55:27.920" endtime="20240705 21:55:27.920"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.920" endtime="20240705 21:55:27.941"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.942" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='40']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.941" endtime="20240705 21:55:27.972"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.920" endtime="20240705 21:55:27.972"/>
+</iter>
+<iter>
+<var name="${i}">41</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:27.972" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='41']</msg>
+<status status="PASS" starttime="20240705 21:55:27.972" endtime="20240705 21:55:27.972"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:27.972" endtime="20240705 21:55:27.992"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:27.992" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='41']'.</msg>
+<status status="PASS" starttime="20240705 21:55:27.992" endtime="20240705 21:55:28.021"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:27.972" endtime="20240705 21:55:28.021"/>
+</iter>
+<iter>
+<var name="${i}">42</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.022" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='42']</msg>
+<status status="PASS" starttime="20240705 21:55:28.022" endtime="20240705 21:55:28.022"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.022" endtime="20240705 21:55:28.042"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.043" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='42']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.042" endtime="20240705 21:55:28.071"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.022" endtime="20240705 21:55:28.071"/>
+</iter>
+<iter>
+<var name="${i}">43</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.072" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='43']</msg>
+<status status="PASS" starttime="20240705 21:55:28.072" endtime="20240705 21:55:28.072"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.072" endtime="20240705 21:55:28.091"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.091" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='43']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.091" endtime="20240705 21:55:28.120"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.071" endtime="20240705 21:55:28.120"/>
+</iter>
+<iter>
+<var name="${i}">44</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.120" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='44']</msg>
+<status status="PASS" starttime="20240705 21:55:28.120" endtime="20240705 21:55:28.120"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.121" endtime="20240705 21:55:28.143"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.143" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='44']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.143" endtime="20240705 21:55:28.171"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.120" endtime="20240705 21:55:28.171"/>
+</iter>
+<iter>
+<var name="${i}">45</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.171" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='45']</msg>
+<status status="PASS" starttime="20240705 21:55:28.171" endtime="20240705 21:55:28.171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.171" endtime="20240705 21:55:28.191"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.192" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='45']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.191" endtime="20240705 21:55:28.219"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.171" endtime="20240705 21:55:28.220"/>
+</iter>
+<iter>
+<var name="${i}">46</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.220" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='46']</msg>
+<status status="PASS" starttime="20240705 21:55:28.220" endtime="20240705 21:55:28.220"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.220" endtime="20240705 21:55:28.238"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.239" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='46']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.239" endtime="20240705 21:55:28.269"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.220" endtime="20240705 21:55:28.269"/>
+</iter>
+<iter>
+<var name="${i}">47</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.269" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='47']</msg>
+<status status="PASS" starttime="20240705 21:55:28.269" endtime="20240705 21:55:28.269"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.269" endtime="20240705 21:55:28.291"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.292" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='47']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.292" endtime="20240705 21:55:28.321"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.269" endtime="20240705 21:55:28.321"/>
+</iter>
+<iter>
+<var name="${i}">48</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.322" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='48']</msg>
+<status status="PASS" starttime="20240705 21:55:28.321" endtime="20240705 21:55:28.322"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.322" endtime="20240705 21:55:28.343"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.343" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='48']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.343" endtime="20240705 21:55:28.374"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.321" endtime="20240705 21:55:28.374"/>
+</iter>
+<iter>
+<var name="${i}">49</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.376" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='49']</msg>
+<status status="PASS" starttime="20240705 21:55:28.376" endtime="20240705 21:55:28.376"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.376" endtime="20240705 21:55:28.396"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.396" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='49']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.396" endtime="20240705 21:55:28.427"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.376" endtime="20240705 21:55:28.427"/>
+</iter>
+<iter>
+<var name="${i}">50</var>
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div[@style='opacity: 1;' and text()='${i}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240705 21:55:28.429" level="INFO">${xpath} = //div[@style='opacity: 1;' and text()='50']</msg>
+<status status="PASS" starttime="20240705 21:55:28.429" endtime="20240705 21:55:28.429"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.429" endtime="20240705 21:55:28.450"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240705 21:55:28.450" level="INFO">Clicking element '//div[@style='opacity: 1;' and text()='50']'.</msg>
+<status status="PASS" starttime="20240705 21:55:28.450" endtime="20240705 21:55:28.482"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.427" endtime="20240705 21:55:28.482"/>
+</iter>
+<status status="PASS" starttime="20240705 21:55:25.423" endtime="20240705 21:55:28.482"/>
+</for>
+<status status="PASS" starttime="20240705 21:55:25.423" endtime="20240705 21:55:28.482"/>
+</kw>
+<kw name="Verify The Puzzle is Done" library="1to50_steps">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Completed Text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.482" endtime="20240705 21:55:28.504"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Completed Text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240705 21:55:28.518" level="INFO">Element '//*[text()='TEST COMPLETED']' is displayed.</msg>
+<status status="PASS" starttime="20240705 21:55:28.504" endtime="20240705 21:55:28.518"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Your Score Text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240705 21:55:28.518" endtime="20240705 21:55:33.413"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Your Score Text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240705 21:55:33.427" level="INFO">Element '//*[text()='1to50, Your score :']' is displayed.</msg>
+<status status="PASS" starttime="20240705 21:55:33.413" endtime="20240705 21:55:33.427"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240705 21:55:36.428" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240705 21:55:33.427" endtime="20240705 21:55:36.428"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:28.482" endtime="20240705 21:55:36.428"/>
+</kw>
+<kw name="Close Page Browser" library="resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240705 21:55:36.428" endtime="20240705 21:55:38.744"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240705 21:55:40.745" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240705 21:55:38.744" endtime="20240705 21:55:40.745"/>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<arg>${EXECDIR}\\files\\*</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20240705 21:55:40.745" level="INFO" html="true">File '&lt;a href="file://D:\QA\Loker\Traveloka\TravelokaTest\files\*"&gt;D:\QA\Loker\Traveloka\TravelokaTest\files\*&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20240705 21:55:40.745" endtime="20240705 21:55:40.745"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:36.428" endtime="20240705 21:55:40.745"/>
+</kw>
+<status status="PASS" starttime="20240705 21:55:15.241" endtime="20240705 21:55:40.746"/>
+</test>
+<status status="PASS" starttime="20240705 21:55:14.753" endtime="20240705 21:55:40.748"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="finishThePuzzle">finishThePuzzle</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
